@@ -6,12 +6,13 @@ import { Badge } from "@/components/ui/badge"
 import { Coins, TrendingUp, Users, Zap, Twitter, MessageCircle, Copy, ExternalLink, Palette } from "lucide-react"
 import { useState } from "react"
 import Image from "next/image"
-import { useRouter } from "next/router"
+import getConfig from "next/config"
 
 export default function MonaPiggaLanding() {
   const [copied, setCopied] = useState(false)
   const contractAddress = "7xKXtg2CW87d97TXJSDpbD5jBkheTqA83TZRuJosgHkv"
-  const { basePath } = useRouter();
+  const { publicRuntimeConfig } = getConfig();
+  const basePath = publicRuntimeConfig.basePath || '';
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(contractAddress)
