@@ -4,7 +4,7 @@ const nextConfig = {
   images: {
     unoptimized: true, // nodig voor export
   }, 
-  '/MonaPigga'
+  basePath: '/MonaPigga'
 };
 
 module.exports = nextConfig;
