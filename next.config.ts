@@ -3,7 +3,8 @@ const nextConfig = {
   output: 'export',
   images: {
     unoptimized: true, // nodig voor export
-  }, // heel belangrijk voor GitHub Pages
+  }, 
+  '/MonaPigga
 };
 
 module.exports = nextConfig;
